@@ -1,87 +1,87 @@
 // Conway's Game of Life:  Honeyfund Coding Challenge
 
 var matrix = [
-    [{"x": 0, "state": false, "liveNeighborCount": 0},
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 0},
-    {"x": 4, "state": false, "liveNeighborCount": 0},
-    {"x": 5, "state": false, "liveNeighborCount": 0},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0}, 
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 0},
-    {"x": 4, "state": false, "liveNeighborCount": 0},
-    {"x": 5, "state": false, "liveNeighborCount": 0},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0}, 
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 1},
-    {"x": 3, "state": false, "liveNeighborCount": 2},
-    {"x": 4, "state": false, "liveNeighborCount": 2},
-    {"x": 5, "state": false, "liveNeighborCount": 1},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0}, 
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 1},
-    {"x": 3, "state": true, "liveNeighborCount": 2},
-    {"x": 4, "state": true, "liveNeighborCount": 2},
-    {"x": 5, "state": false, "liveNeighborCount": 2},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0}, 
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 1},
-    {"x": 3, "state": false, "liveNeighborCount": 3},
-    {"x": 4, "state": true, "liveNeighborCount": 2},
-    {"x": 5, "state": false, "liveNeighborCount": 2},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0},  
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 1},
-    {"x": 4, "state": false, "liveNeighborCount": 1},
-    {"x": 5, "state": false, "liveNeighborCount": 1},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0}, 
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 0},
-    {"x": 4, "state": false, "liveNeighborCount": 0},
-    {"x": 5, "state": false, "liveNeighborCount": 0},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0} ,  
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 0},
-    {"x": 4, "state": false, "liveNeighborCount": 0},
-    {"x": 5, "state": false, "liveNeighborCount": 0},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}],
-    [{"x": 0, "state": false, "liveNeighborCount": 0},
-    {"x": 1, "state": false, "liveNeighborCount": 0},
-    {"x": 2, "state": false, "liveNeighborCount": 0},
-    {"x": 3, "state": false, "liveNeighborCount": 0},
-    {"x": 4, "state": false, "liveNeighborCount": 0},
-    {"x": 5, "state": false, "liveNeighborCount": 0},
-    {"x": 6, "state": false, "liveNeighborCount": 0},
-    {"x": 7, "state": false, "liveNeighborCount": 0},
-    {"x": 8, "state": false, "liveNeighborCount": 0}]];
+    [{"x": 0, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 1, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 4, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 5, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 6, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 0, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 0, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 1, "state": false, "liveNeighborCount": 0}, 
+    {"x": 1, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 4, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 5, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 6, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 1, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 1, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 2, "state": false, "liveNeighborCount": 0}, 
+    {"x": 1, "y": 2, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 2, "state": false, "liveNeighborCount": 1},
+    {"x": 3, "y": 2, "state": false, "liveNeighborCount": 2},
+    {"x": 4, "y": 2, "state": false, "liveNeighborCount": 2},
+    {"x": 5, "y": 2, "state": false, "liveNeighborCount": 1},
+    {"x": 6, "y": 2, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 2, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 2, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 3, "state": false, "liveNeighborCount": 0}, 
+    {"x": 1, "y": 3, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 3, "state": false, "liveNeighborCount": 1},
+    {"x": 3, "y": 3, "state": true, "liveNeighborCount": 2},
+    {"x": 4, "y": 3, "state": true, "liveNeighborCount": 2},
+    {"x": 5, "y": 3, "state": false, "liveNeighborCount": 2},
+    {"x": 6, "y": 3, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 3, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 3, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 4, "state": false, "liveNeighborCount": 0}, 
+    {"x": 1, "y": 4, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 4, "state": false, "liveNeighborCount": 1},
+    {"x": 3, "y": 4, "state": false, "liveNeighborCount": 3},
+    {"x": 4, "y": 4, "state": true, "liveNeighborCount": 2},
+    {"x": 5, "y": 4, "state": false, "liveNeighborCount": 2},
+    {"x": 6, "y": 4, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 4, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 4, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 5, "state": false, "liveNeighborCount": 0},  
+    {"x": 1, "y": 5, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 5, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 5, "state": false, "liveNeighborCount": 1},
+    {"x": 4, "y": 5, "state": false, "liveNeighborCount": 1},
+    {"x": 5, "y": 5, "state": false, "liveNeighborCount": 1},
+    {"x": 6, "y": 5, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 5, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 5, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 6, "state": false, "liveNeighborCount": 0}, 
+    {"x": 1, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 4, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 5, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 6, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 6, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 6, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 7, "state": false, "liveNeighborCount": 0} ,  
+    {"x": 1, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 4, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 5, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 6, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 7, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 7, "state": false, "liveNeighborCount": 0}],
+    [{"x": 0, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 1, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 2, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 3, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 4, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 5, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 6, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 7, "y": 8, "state": false, "liveNeighborCount": 0},
+    {"x": 8, "y": 8, "state": false, "liveNeighborCount": 0}]];
 
 var isInitialized = false;
 var liveNeighborCount = 0;
@@ -116,10 +116,10 @@ function nextGen(matrix) {
           drawGrid(matrix);  // use hard-coded matrix first time
       } else {
         // console.log('already initialized');
-        var newMatrix = matrix;  // make changes on a copy of the current matrix
-        for(var i=0; i < newMatrix.length; i++){
-            for (var j = 0; j < newMatrix[i].length; j++){
-                var currentIndex = {"x": j, "y": i};
+        // var newMatrix = matrix;  // make changes on a copy of the current matrix
+        for(var i=0; i < matrix.length; i++){
+            for (var j = 0; j < matrix[i].length; j++){
+                // var currentIndex = {"x": j, "y": i};
                 if (matrix[i][j].liveNeighborCount === 2 || matrix[i][j].liveNeighborCount === 3){
                     matrix[i][j].state = true;
                     // console.log(matrix[i][j], ' is alive');
@@ -128,6 +128,7 @@ function nextGen(matrix) {
                     // console.log(matrix[i][j], ' is dead');
                 }
 
+                // update classes  REFACTOR:  could be separate mini-function
                 var cellArray = $('#gameboard').find('div');
                 for (var k = 0; k < cellArray.length; k++) {
                     if( cellArray[k].innerText == "2" || cellArray[k].innerText == "3"){ 
@@ -136,51 +137,53 @@ function nextGen(matrix) {
                         $(cellArray[k]).removeClass('live').addClass('empty');
                     }
                 }
-
-                countLiveNeighbors(currentIndex);
+                countLiveNeighbors(matrix[i][j]);
             }
         }
-        // assign values to newMatrix
-        // clearBoard();
-        // drawGrid(newMatrix);
+        clearBoard();
+        drawGrid(matrix);
     } // end of else. isInitialized === true
     // console.log(neighborArray);
 }
 
 function countLiveNeighbors(currentIndex){
-    var upL = { "x": (currentIndex.x - 1), "y": (currentIndex.y - 1)};
-    var upC = { "x": currentIndex.x, "y": (currentIndex.y - 1)};
-    var upR = { "x": (currentIndex.x + 1), "y": (currentIndex.y - 1)};
-    var left = { "x": (currentIndex.x - 1), "y": currentIndex.y};
-    var right = { "x": (currentIndex.x + 1), "y": currentIndex.y};
-    var dnL = { "x": (currentIndex.x - 1), "y": (currentIndex.y + 1)};
-    var dnC = { "x": currentIndex.x, "y": (currentIndex.y + 1)};
-    var dnR ={ "x": (currentIndex.x + 1), "y": (currentIndex.y + 1)};
+    // reset count
+    currentIndex.liveNeighborCount = 0;
+
+    var upL = {"x": (currentIndex.x - 1), "y": (currentIndex.y - 1)};
+    var upC = {"x": currentIndex.x, "y": (currentIndex.y - 1)};
+    var upR = {"x": (currentIndex.x + 1), "y": (currentIndex.y - 1)};
+    var left = {"x": (currentIndex.x - 1), "y": currentIndex.y};
+    var right = {"x": (currentIndex.x + 1), "y": currentIndex.y};
+    var dnL = {"x": (currentIndex.x - 1), "y": (currentIndex.y + 1)};
+    var dnC = {"x": currentIndex.x, "y": (currentIndex.y + 1)};
+    var dnR ={"x": (currentIndex.x + 1), "y": (currentIndex.y + 1)};
 
     var neighborArray = [upL, upC, upR, left, right, dnL, dnC, dnR];
 
     // wrap matrix
-    for (var i = 0; i < neighborArray.length; i++){
-        if(neighborArray[i].x === -1){
-            neighborArray[i].x = 8;
-        } else if (neighborArray[i].x === 9){
-            neighborArray[i].x = 0;
+    for (var k = 0; k < neighborArray.length; k++){
+        if(neighborArray[k].x === -1){
+            neighborArray[k].x = 8;
+        } else if (neighborArray[k].x === 9){
+            neighborArray[k].x = 0;
         }
-        if (neighborArray[i].y === -1){
-            neighborArray[i].y = 8;
-        } else if (neighborArray[i].y === 9){
-            neighborArray[i].y = 0;
+        if (neighborArray[k].y === -1){
+            neighborArray[k].y = 8;
+        } else if (neighborArray[k].y === 9){
+            neighborArray[k].y = 0;
         }
+
+        if ( matrix[neighborArray[k].y][neighborArray[k].x].state === true) { 
+            currentIndex.liveNeighborCount+=1;
+        } 
+        // else if (matrix[neighborArray[k].y][neighborArray[k].x].state === false){
+        //     currentIndex.liveNeighborCount+=0;
+        // }
     }
 
     // console.log('neighborArray is: ', neighborArray);
-    if (currentIndex.state === true) { 
-        for(var k = 0; k < neighborArray.length; k++){
-            currentIndex.liveNeighborCount += 1; 
-        }
-    }
-    console.log('hello from countLiveNeighbors');
-    // return liveNeighborCount;
+    // console.log('currentIndex: ', currentIndex, ' has ', currentIndex.liveNeighborCount, ' live neighbors.');
 }
 
 function clearBoard(){
