@@ -128,6 +128,8 @@ function nextGen(matrix) {
                     // console.log(matrix[i][j], ' is dead');
                 }
 
+                // countLiveNeighbors(matrix[i][j]);  // option move line 142 here
+
                 // update classes  REFACTOR:  could be separate mini-function
                 var cellArray = $('#gameboard').find('div');
                 for (var k = 0; k < cellArray.length; k++) {
@@ -177,11 +179,7 @@ function countLiveNeighbors(currentIndex){
         if ( matrix[neighborArray[k].y][neighborArray[k].x].state === true) { 
             currentIndex.liveNeighborCount+=1;
         } 
-        // else if (matrix[neighborArray[k].y][neighborArray[k].x].state === false){
-        //     currentIndex.liveNeighborCount+=0;
-        // }
     }
-
     // console.log('neighborArray is: ', neighborArray);
     // console.log('currentIndex: ', currentIndex, ' has ', currentIndex.liveNeighborCount, ' live neighbors.');
 }
