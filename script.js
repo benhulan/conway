@@ -191,7 +191,7 @@ function countLiveNeighbors(matrix){
                 }
             }
             updateDOM(currentIndex.liveNeighborCount);
-            console.log('ROW: ', currentIndex.row, ', COLUMN: ', currentIndex.column, ' has ', currentIndex.liveNeighborCount, ' live neighbors.');
+            // console.log('ROW: ', currentIndex.row, ', COLUMN: ', currentIndex.column, ' has ', currentIndex.liveNeighborCount, ' live neighbors.');
         }
     }
     return matrix;
