@@ -2,7 +2,7 @@
     background-color: #FFF;
     width: 668px;
 }
-#proceed {
+#goback, #proceed {
     float: left;
     clear: both;
 }

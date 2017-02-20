@@ -1,5 +1,6 @@
 // Conway's Game of Life:  Honeyfund Coding Challenge
-var matrix = [[{"row": 0, "column": 0, "state": false, "liveNeighborCount": 0},
+var matrix = [
+    [{"row": 0, "column": 0, "state": false, "liveNeighborCount": 0},
     {"row": 0, "column": 1, "state": false, "liveNeighborCount": 0},
     {"row": 0, "column": 2, "state": false, "liveNeighborCount": 0},
     {"row": 0, "column": 3, "state": false, "liveNeighborCount": 0},
@@ -12,35 +13,35 @@ var matrix = [[{"row": 0, "column": 0, "state": false, "liveNeighborCount": 0},
     {"row": 1, "column": 1, "state": false, "liveNeighborCount": 0},
     {"row": 1, "column": 2, "state": false, "liveNeighborCount": 0},
     {"row": 1, "column": 3, "state": false, "liveNeighborCount": 0},
-    {"row": 1, "column": 4, "state": false, "liveNeighborCount": 0},
-    {"row": 1, "column": 5, "state": false, "liveNeighborCount": 0},
-    {"row": 1, "column": 6, "state": false, "liveNeighborCount": 0},
+    {"row": 1, "column": 4, "state": false, "liveNeighborCount": 1},
+    {"row": 1, "column": 5, "state": false, "liveNeighborCount": 1},
+    {"row": 1, "column": 6, "state": false, "liveNeighborCount": 1},
     {"row": 1, "column": 7, "state": false, "liveNeighborCount": 0},
     {"row": 1, "column": 8, "state": false, "liveNeighborCount": 0}],
     [{"row": 2, "column": 0, "state": false, "liveNeighborCount": 0}, 
     {"row": 2, "column": 1, "state": false, "liveNeighborCount": 0},
     {"row": 2, "column": 2, "state": false, "liveNeighborCount": 1},
-    {"row": 2, "column": 3, "state": false, "liveNeighborCount": 2},
+    {"row": 2, "column": 3, "state": false, "liveNeighborCount": 1},
     {"row": 2, "column": 4, "state": false, "liveNeighborCount": 2},
-    {"row": 2, "column": 5, "state": false, "liveNeighborCount": 1},
-    {"row": 2, "column": 6, "state": false, "liveNeighborCount": 0},
+    {"row": 2, "column": 5, "state": true, "liveNeighborCount": 0},
+    {"row": 2, "column": 6, "state": false, "liveNeighborCount": 1},
     {"row": 2, "column": 7, "state": false, "liveNeighborCount": 0},
     {"row": 2, "column": 8, "state": false, "liveNeighborCount": 0}],
     [{"row": 3, "column": 0, "state": false, "liveNeighborCount": 0}, 
     {"row": 3, "column": 1, "state": false, "liveNeighborCount": 0},
     {"row": 3, "column": 2, "state": false, "liveNeighborCount": 1},
-    {"row": 3, "column": 3, "state": true, "liveNeighborCount": 2},
-    {"row": 3, "column": 4, "state": true, "liveNeighborCount": 2},
+    {"row": 3, "column": 3, "state": true, "liveNeighborCount": 1},
+    {"row": 3, "column": 4, "state": false, "liveNeighborCount": 3},
     {"row": 3, "column": 5, "state": false, "liveNeighborCount": 2},
-    {"row": 3, "column": 6, "state": false, "liveNeighborCount": 0},
+    {"row": 3, "column": 6, "state": false, "liveNeighborCount": 1},
     {"row": 3, "column": 7, "state": false, "liveNeighborCount": 0},
     {"row": 3, "column": 8, "state": false, "liveNeighborCount": 0}],
     [{"row": 4, "column": 0, "state": false, "liveNeighborCount": 0}, 
     {"row": 4, "column": 1, "state": false, "liveNeighborCount": 0},
     {"row": 4, "column": 2, "state": false, "liveNeighborCount": 1},
-    {"row": 4, "column": 3, "state": false, "liveNeighborCount": 3},
-    {"row": 4, "column": 4, "state": true, "liveNeighborCount": 2},
-    {"row": 4, "column": 5, "state": false, "liveNeighborCount": 2},
+    {"row": 4, "column": 3, "state": false, "liveNeighborCount": 2},
+    {"row": 4, "column": 4, "state": true, "liveNeighborCount": 1},
+    {"row": 4, "column": 5, "state": false, "liveNeighborCount": 1},
     {"row": 4, "column": 6, "state": false, "liveNeighborCount": 0},
     {"row": 4, "column": 7, "state": false, "liveNeighborCount": 0},
     {"row": 4, "column": 8, "state": false, "liveNeighborCount": 0}],
@@ -82,6 +83,7 @@ var matrix = [[{"row": 0, "column": 0, "state": false, "liveNeighborCount": 0},
     {"row": 8, "column": 8, "state": false, "liveNeighborCount": 0}]];
 
 var isInitialized = false;
+var previous = false;
 var generationCount = 0;
 
 // initialize board with 3 live adjacent cells, currently hard-coded 
@@ -146,7 +148,7 @@ function nextGen(matrix) {
 }
 
 function prevGen(matrix){
-    // console.log('hello from prevGen'); // TODO: Write reverse nextGen function
+    // TODO: Write reverse nextGen function
     generationCount--;
     // console.log(generationCount);
     if (generationCount > 1){
@@ -155,6 +157,10 @@ function prevGen(matrix){
         $("#goback").css('display', 'none');        
     }
     $("#genCount").html('<h4>Generation: ' + generationCount + '</h4>');
+    if(!previous){
+        previous = true;
+        alert("This feature has not yet been fully implemented.");
+    }
 }
 
 function countLiveNeighbors(matrix){
